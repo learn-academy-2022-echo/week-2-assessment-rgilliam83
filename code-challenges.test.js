@@ -64,13 +64,30 @@ describe("mult3", () => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
+//write the test
+//run test testing suite to see a failing test
+
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
 
+
+describe("cap", () => {
+  it("return an array with all words capitalized", () =>{
+    expect(randomNouns1()).toEqual("Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew");
+    expect(randomNouns2()).toEqual("Temperature", "Database", "Chopsticks", "Mango", "Deduction");
+  })
+})
+
 // b) Create the function that makes the test pass.
+//write the code 
+//run testing suit to see test pass
+
+const cap = () => {
+  return "Temperature", "Database", "Chopsticks", "Mango", "Deduction"
+}
 
 
 
