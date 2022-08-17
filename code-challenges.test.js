@@ -74,21 +74,60 @@ const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deducti
 
 
 
-describe("cap", () => {
-  it("return an array with all words capitalized", () =>{
-    expect(randomNouns1()).toEqual("Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew");
-    expect(randomNouns2()).toEqual("Temperature", "Database", "Chopsticks", "Mango", "Deduction");
-  })
-})
+describe("capitalize", () => {
+    it("return an array with all words capitalized", () =>{
+    expect(capitalize(randomNouns1)).toEqual("Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew");
+    expect(capitalize(randomNouns2)).toEqual("Temperature", "Database", "Chopsticks", "Mango", "Deduction");
+  });
+});
+
 
 // b) Create the function that makes the test pass.
 //write the code 
 //run testing suit to see test pass
 
-const cap = () => {
-  return "Temperature", "Database", "Chopsticks", "Mango", "Deduction"
+
+const capitalize = (array) => {
+  
+   return array.charAt(0).toUpperCase(randomNouns1) + str.slice(1);
+
+
 }
 
+// unable to correct the following error:
+// learnacademy@LEARNs-MacBook-Air week-2-assessment-rgilliam83 % yarn jest
+// yarn run v1.22.19
+// warning package.json: No license field
+// $ /Users/learnacademy/Desktop/week-2-assessment-rgilliam83/node_modules/.bin/jest
+//  FAIL  ./code-challenges.test.js
+//   mult3
+//     ✓ takes in an array of numbers and returns an array with all the numbers multiplied by 3 (1 ms)
+//   capitalize
+//     ✕ return an array with all words capitalized
+
+//   ● capitalize › return an array with all words capitalized
+
+//     TypeError: array.charAt is not a function
+
+//       90 | const capitalize = (array) => {
+//       91 |   
+//     > 92 |    return array.charAt(0).toUpperCase(randomNouns1) + str.slice(1);
+//          |                 ^
+//       93 | }
+//       94 |
+//       95 |
+
+//       at charAt (code-challenges.test.js:92:17)
+//       at Object.capitalize (code-challenges.test.js:79:12)
+
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 passed, 2 total
+// Snapshots:   0 total
+// Time:        0.132 s, estimated 1 s
+// Ran all test suites.
+// error Command failed with exit code 1.
+// info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+// learnacademy@LEARNs-MacBook-Air week-2-assessment-rgilliam83 % 
 
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
